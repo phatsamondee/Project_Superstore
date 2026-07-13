@@ -94,14 +94,14 @@ The generated features were validated before being used in subsequent analyses a
 Performed exploratory analysis to understand the dataset before answering business questions.
 
 EDA included:
-- 🗂️ Dataset overview
-- 📆 Date range
-- 💰 Sales distribution
-- 📈 Profit distribution
-- 🏷️ Discount distribution
-- 🚚 Shipping delay distribution
-- 📦 Category overview
-- 🌎 Region overview
+- Dataset overview
+- Date range
+- Sales distribution
+- Profit distribution
+- Discount distribution
+- Shipping delay distribution
+- Category overview
+- Region overview
 
 ## 📊 Business Analysis
 Analyzed the feature-engineered dataset to identify the key factors influencing sales and profitability.
@@ -141,6 +141,8 @@ The analysis focused on the following business questions:
 ## 📊 Excel Analysis
 
 Excel Pivot Tables were used for exploratory business analysis and to cross-check key metrics generated from SQL before developing the Tableau dashboard.
+
+📄 **View the Excel analysis here:** [Excel Analysis](your-link-here)
 
 The analysis covered:
 
