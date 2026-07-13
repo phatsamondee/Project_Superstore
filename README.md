@@ -9,7 +9,7 @@ The project follows a complete analytics workflow, including data cleaning, feat
 
 | Tool | Purpose |
 |------|---------|
-| 🛢️ DB Browser for SQLite (SQLite) | Data cleaning, feature engineering, business analysis |
+| 🛢️ DB Browser for SQLite (SQLite) | Data cleaning, feature engineering, EDA, business analysis |
 | 📊 Excel (Pivot Tables) | Initial data exploration and KPI validation |
 | 📈 Tableau | Interactive dashboard and data visualization |
 
@@ -34,6 +34,7 @@ The project follows a complete analytics workflow, including data cleaning, feat
 | Business Metrics | Sales, Quantity, Discount, Profit |
 
 ## Project Workflow
+SQL scripts for data cleaning, feature engineering, exploratory data analysis, and business analysis are available in the [`SQL`](SQL/) folder.
 
 ### 1. Data Cleaning
 
@@ -76,9 +77,9 @@ Validated the cleaned dataset to ensure:
 ---
 
 ### 2. Feature Engineering
+Created an analytical view named `Sample-Superstore_clean_addfeature` by adding derived features to support business analysis. The generated view is available in the [`Data`](Data/) folder.
 
-Created an analytical view by adding derived features to support business analysis, including:
-
+The added features include:
 - Order Year, Month, and Quarter
 - Shipping Delay (days)
 - Discount Type
@@ -140,7 +141,7 @@ The analysis focused on the following business questions:
 
 Excel Pivot Tables were used for exploratory business analysis and to cross-check key metrics generated from SQL before developing the Tableau dashboard.
 
-📄 **View the Excel analysis here:** [Excel Analysis](your-link-here)
+📄 **View the Excel analysis here:** [`Excel`](Excel/)
 
 The analysis covered:
 
