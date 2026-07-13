@@ -37,6 +37,8 @@ The project follows a complete analytics workflow, including data cleaning, feat
 
 ### 1. Data Cleaning
 
+#### 1.1 Data Quality Checks
+
 Performed data quality checks to ensure the dataset was accurate and ready for analysis.
 
 1. **Checked missing values**
@@ -58,16 +60,12 @@ Performed data quality checks to ensure the dataset was accurate and ready for a
     - Converted `Discount` from **INTEGER → REAL**.
     - Note: Retained `Order_Date` and `Ship_Date` as **TEXT**, since SQLite does not enforce a native `DATE` data type.
 
----
-
-### 2. Created Cleaned Dataset
+#### 1.2 Created Cleaned Dataset
 Created a cleaned table named `Sample_Superstore_clean` within the SQLite database.
 
 The cleaned database is available in the [`Data`](Data/) folder.
 
----
-
-### 3. Data Validation
+#### 1.3 Data Validation
 Validated the cleaned dataset to ensure:
 - No missing values
 - No duplicate records
@@ -77,7 +75,7 @@ Validated the cleaned dataset to ensure:
 
 ---
 
-### 4. Feature Engineering
+### 2. Feature Engineering
 
 Created an analytical view by adding derived features to support business analysis, including:
 
@@ -90,7 +88,7 @@ The generated features were validated before being used in subsequent analyses a
 
 ---
 
-### 5. Exploratory Data Analysis (EDA)
+### 3. Exploratory Data Analysis (EDA)
 Performed exploratory analysis to understand the dataset before answering business questions.
 
 EDA included:
