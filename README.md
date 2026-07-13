@@ -63,7 +63,7 @@ Performed data quality checks to ensure the dataset was accurate and ready for a
 ### 2. Created Cleaned Dataset
 Created a cleaned table named `Sample_Superstore_clean` within the SQLite database.
 
-The cleaned database is available in the [`data/`](data/) folder.
+The cleaned database is available in the [`Data/`](Data/) folder.
 
 ---
 
