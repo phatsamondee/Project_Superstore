@@ -33,7 +33,7 @@ The project follows a complete analytics workflow, including data cleaning, feat
 | Product Information | Product ID, Category, Sub-Category, Product Name |
 | Business Metrics | Sales, Quantity, Discount, Profit |
 
-## 🔄 Project Workflow
+## Project Workflow
 
 ### 1. Data Cleaning
 
@@ -46,7 +46,8 @@ Performed data quality checks to ensure the dataset was accurate and ready for a
     - Found **1 duplicate record**, which was removed.
 
 3. **Validated postal codes**
-    - Detected postal codes with fewer than 5 digits.
+    - Checked for postal codes with a length other than 5 digits.
+    - Found 4-digit postal codes where the leading zero was dropped during data import.
     - Added leading zeros to standardize all postal codes to 5 digits.
 
 4. **Detected encoding issues**
@@ -83,7 +84,7 @@ Created an analytical view by adding derived features to support business analys
 - Order Year, Month, and Quarter
 - Shipping Delay (days)
 - Discount Type
-- Customer Level based on sales and purchase frequency
+- Customer Level based on sales and purchase frequency: Platinum (Top 10%), Gold (Top 20%), Silver (Top 40%) and Classic (Others)
 
 The generated features were validated before being used in subsequent analyses and dashboard development.
 
@@ -107,7 +108,7 @@ Analyzed the feature-engineered dataset to identify the key factors influencing 
 
 The analysis focused on the following business questions:
 
-1. 📌 **Overall Business Performance**
+1. **Overall Business Performance**
    - Total Sales
    - Total Profit
    - Profit Margin
@@ -115,21 +116,21 @@ The analysis focused on the following business questions:
    - Average Order Value (AOV)
    - Total Customers
 
-2. 📦 **Product Performance**
+2. **Product Performance**
    - Which product categories generate the highest sales and profit?
 
-3. 🌎 **Regional Performance**
+3. **Regional Performance**
    - Which regions and states perform the best?
 
-4. 👥 **Customer Analysis**
+4. **Customer Analysis**
    - Which customer segments contribute the most revenue?
    - How does customer spending vary by Customer Level (Platinum, Gold, Silver, and Classic)?
 
-5. 🚚 **Shipping Analysis**
+5. **Shipping Analysis**
    - Which shipping mode is used most frequently?
    - What is the average shipping delay?
 
-6. 📈 **Sales Trends**
+6. **Sales Trends**
    - Monthly Trend
    - Quarterly Trend
    - Yearly Trend
@@ -162,26 +163,27 @@ The feature-engineered dataset was imported into Tableau to create an interactiv
 
 ## 💡 Key Insights
 
-- 💰 **Business Performance**
-  - Generated **$2.30M** in total sales with **$286K** in total profit, resulting in a **12.47% profit margin** across **5,009 orders**.
+- **Business Performance**
+  - Generated **$2.30M** in total sales and **$286K** in total profit from **2014–2017**, resulting in a **12.47% profit margin** across **5,009 orders**.
 
-- 📅 **Annual Performance**
-  - Sales and profit increased steadily from **2014 to 2017**, with **2017** achieving the highest revenue and profit.
+- **Annual Performance**
+  - Sales and profit increased consistently from **2014 to 2017**, with **2017** recording the highest total sales and profit. However, **profit margin declined in 2017**, indicating lower profitability relative to revenue compared with previous years.
 
-- 📈 **Monthly Trend**
-  - Average monthly sales peaked in **November** and **December**, while **February** recorded the highest average profit margin.
+- **Monthly Trend**
+  - Total monthly sales peaked in **November** and **December**, while **February** recorded the highest profit margin.
 
-- 📦 **Product Performance**
+- **Product Performance**
   - **Technology** generated the highest sales, followed by **Office Supplies** and **Furniture**.
   - **Phones** and **Chairs** were the top-performing sub-categories by sales.
+  - In contrast, **Tables**, **Bookcases**, and **Supplies** generated **negative profits**, suggesting these sub-categories may require pricing, discount, or cost optimization.
 
-- 🌎 **Regional Performance**
-  - The **West** region generated the highest sales, driven primarily by **California**. The next highest contributors were **New York** (East) and **Texas** (Central).
+- **Regional Performance**
+  - The **West** region recorded the highest sales, led by **California**, followed by **New York (East)** and **Texas (Central)**.
 
-- 👥 **Customer Analysis**
-  - The **Consumer** segment contributed the highest sales.
-  - **Platinum** customers achieved the highest profit margin within the Corporate segment.
+- **Customer Analysis**
+  - **Classic** customers accounted for the highest sales across all segments, with **Consumer** generating the most sales, followed by **Corporate** and **Home Office**.
+  - In contrast, **Gold** and **Platinum** customers generally delivered the highest profit margins.
 
-- 🚚 **Shipping Analysis**
+- **Shipping Analysis**
   - **Standard Class** was the most frequently used shipping mode.
   - Average shipping delay ranged from **0–5 days**, depending on the shipping method.
